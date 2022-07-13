@@ -1,0 +1,10 @@
+class Solution:
+    def distributeCandies(self, candyType: List[int]) -> int:
+        num_candies = int(len(candyType)/2)
+        
+        uniqueTypes = set(candyType)
+
+        if len(uniqueTypes)> num_candies:
+            return(num_candies)
+        else:
+            return(len(uniqueTypes))
