@@ -1,0 +1,20 @@
+class Solution:
+    def findMin(self, nums: List[int]) -> int:
+        startindex = 0
+        endindex = len(nums)-1
+        
+        if nums[startindex]<=nums[endindex]:
+            return(nums[startindex])
+        
+        while (True):
+            print(startindex,endindex)
+            midindex = int((startindex+endindex)/2)
+            print(midindex)
+            
+            if nums[startindex]<nums[midindex]:
+                startindex = midindex
+            else:
+                endindex = midindex
+            
+            if startindex == endindex:
+                return(nums[midindex+1])
